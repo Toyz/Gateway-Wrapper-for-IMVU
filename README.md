@@ -9,6 +9,8 @@ Currently the API supprots the following Methods
     GetUserID($username)
     AvatarExist($username)
     GetUserInformation($username)
+    GiveCreditsAndProducts($transactionID, $CreditAmount, $ToUsername, $Products)
+    GetCreditBalance($WithPromo)
 
 ## To use these is very simple ##
 
@@ -55,3 +57,20 @@ Returns as **int**
 0 = User Doesn't exist
 
     echo $imvu->AvatarExist("Toyz");
+
+### Check Credit Balance ###
+Returns as **int**
+Param **$WithPromo** is **Boolean**
+
+    echo $imvu->GetCreditBalance(true);
+    
+### Send Credits/Products ###
+Returns as **Array**
+Param **$transactionID** has to be a Unique String
+Param **$CreditAmount** is a **int**
+Param **$ToUsername** is a **String** (User whos getting said Credits/Items)
+Param **$Products** is a **Array** (Can be empty)
+
+    echo $imvu->GiveCreditsAndProducts("sdfhdslhfdasjlhfadskj", 10000, "Toyz", NULL);
+    
+    
