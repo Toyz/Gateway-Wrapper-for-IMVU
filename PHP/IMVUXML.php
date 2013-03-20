@@ -50,5 +50,24 @@ class IMVUXML{
         
         return $this->imvu->getResponse();
     }
+
+    function GetCreditBalance($WithPromo)
+    {
+        if($WithPromo)
+        {
+            $this->imvu->query('gateway.checkBalance2', $this->Username, $this->Password);
+        }else{
+            $this->imvu->query('gateway.checkBalance', $this->Username, $this->Password);
+        }
+        
+        return $this->imvu->getResponse();
+    }
+
+    function GiveCreditsAndProducts($transactionID, $CreditAmount, $ToUsername, $Products)
+    {
+        $this->imvu->query('gateway.giveCreditsAndProducts2', $transactionID, $this->Username, $this->Password, $ToUsername, $CreditAmount, $Products);
+        
+        return $this->imvu->getResponse();
+    }
 }
 ?>
