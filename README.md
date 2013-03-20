@@ -36,6 +36,8 @@ Returns as **Array**
 ### Getting All Gateway Method's help files ###
 Returns as **String**
 
+- Param **$methodName** is a **string**
+
     $iarray = $imvu->GetMethodList();
     for($i=0;$i<count($iarray);$i++)
     {
@@ -53,23 +55,25 @@ User Info Returns as **Array**
     
 ### Check if user exist ###
 Returns as **int**
-1 = User Exist
-0 = User Doesn't exist
+- 1 = User Exist
+- 0 = User Doesn't exist
 
     echo $imvu->AvatarExist("Toyz");
 
 ### Check Credit Balance ###
 Returns as **int**
-Param **$WithPromo** is **Boolean**
+
+- Param **$WithPromo** is **Boolean**
 
     echo $imvu->GetCreditBalance(true);
     
 ### Send Credits/Products ###
 Returns as **Array**
-Param **$transactionID** has to be a Unique String
-Param **$CreditAmount** is a **int**
-Param **$ToUsername** is a **String** (User whos getting said Credits/Items)
-Param **$Products** is a **Array** (Can be empty)
+
+- Param **$transactionID** has to be a Unique String
+- Param **$CreditAmount** is a **int**
+- Param **$ToUsername** is a **String** (User whos getting said Credits/Items)
+- Param **$Products** is a **Array** (Can be empty)
 
     echo $imvu->GiveCreditsAndProducts("sdfhdslhfdasjlhfadskj", 10000, "Toyz", NULL);
     
