@@ -1,0 +1,105 @@
+/* ----- Global ----- */
+*{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style:none;
+}
+li{
+	display:inline-block;
+}
+a{
+	display:block;
+	padding:10px;
+	text-decoration:none;
+}
+p{
+	line-height:1.8em;
+	margin:10px;
+}
+.clearFloat{
+	clear:both;
+}
+body{
+	font-size:100%;
+}
+/* ----- Menu ----- */
+.menu,
+.menu2,
+.menu3,
+.menu4{
+	width:100%;
+	margin:10px 0;
+}
+.menu ul{
+	background:#2d2d2d;
+}
+.menu2 ul{
+	background:#ffffff;
+}
+.menu3 ul{
+	background:#88aa00;
+}
+.menu4 ul{
+	background:#ffbf00;
+}
+.menu5 ul{
+	background:#009cff;
+}
+.menu li,
+.menu2 li,
+.menu3 li,
+.menu4 li,
+.menu5 li{
+	float:left;
+}
+.menu li:first-child,
+.menu2 li:first-child,
+.menu3 li:first-child,
+.menu4 li:first-child,
+.menu5 li:first-child{
+	margin-left:5px;
+}
+.menu a,
+.menu2 a,
+.menu3 a,
+.menu4 a,
+.menu5 a{
+	color:#bbbbbb;
+	border-top:2px solid transparent;
+}
+
+.menu3 a,
+.menu5 a{
+	color:#ffffff;
+}
+.menu2 a,
+.menu4 a{
+	color:#2d2d2d;
+}
+
+.menu a:hover,
+.menu li.active a{
+	background:#3d3d3d;
+	color:#dddddd;
+	border-top:2px solid #ff4800;
+}
+.menu2 a:hover,
+.menu2 li.active a{
+	border-top:2px solid #03F;
+}
+.menu3 a:hover,
+.menu3 li.active a{
+	border-top:2px solid #ffffff;
+}
+.menu4 a:hover,
+.menu4 li.active a{
+	border-top:2px solid #2d2d2d;
+}
+.menu5 a:hover,
+.menu5 li.active a{
+	border-top:2px solid #ffffff;
+}
