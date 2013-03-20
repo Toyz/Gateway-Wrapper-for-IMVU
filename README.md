@@ -11,6 +11,8 @@ Currently the API supprots the following Methods
     GetUserInformation($username)
     GiveCreditsAndProducts($transactionID, $CreditAmount, $ToUsername, $Products)
     GetCreditBalance($WithPromo)
+    GetProductInfo($PID)
+    GetCatagories($Start_Row, $End_Row)
 
 ## To use these is very simple ##
 
@@ -83,3 +85,18 @@ Param **$Products** is a **Array** (Can be empty)
     echo $imvu->GiveCreditsAndProducts("sdfhdslhfdasjlhfadskj", 10000, "Toyz", NULL);
     
     
+### Get Product Info ###
+Returns as **Array**
+
+Param **PID** is **Int**
+
+    print_r($imvu->GetProductInfo(80)); //Returns Product info for PID 80
+    
+### Get Categories List ###
+Returns as **Array** and each object is a **Array*
+
+Param **$Start_Row** is **Int**
+
+Param **$End_Row** is **Int**
+
+    print_r($imvu->GetCatagories(0, 10)); //Returns the first 10 categories in IMVU
