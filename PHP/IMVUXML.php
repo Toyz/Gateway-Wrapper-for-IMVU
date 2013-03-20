@@ -70,14 +70,14 @@ class IMVUXML{
         return $this->imvu->getResponse();
     }
 
-    function GetIMVUProductInfo($PID)
+    function GetProductInfo($PID)
     {
         $this->imvu->query('gateway.getProductInfo', $this->Username, $this->Password, $PID);
         
         return $this->imvu->getResponse();
     }
     
-    function GetIMVUCatagories($Start_Row, $End_Row)
+    function GetCatagories($Start_Row, $End_Row)
     {
         $this->imvu->query('gateway.getCategories', $this->Username, $this->Password, $Start_Row, $End_Row);
         
